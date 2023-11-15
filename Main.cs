@@ -14,6 +14,8 @@ namespace RPG_Dashboard
             player1.Attack(enemy1);
             player1.Attack(enemy1);
             player1.Attack(enemy1);
+            enemy1.Heal(400);
+            enemy1.Heal(400);
         }
     }
 }

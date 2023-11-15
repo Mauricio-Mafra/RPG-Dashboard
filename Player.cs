@@ -47,11 +47,16 @@
             Console.WriteLine($"{target.Name}'s HP: {target.CurrentHP}/{target.MaxHP}");
         }
 
-        public void Heal(int healingAmmount) {
+        public void Heal(int healingAmmount) 
+        {
+            Console.WriteLine("---------  Heal  ---------");
+            Console.WriteLine($"{Name} heals.");
+
             if (CurrentHP + healingAmmount > MaxHP)
             {
-                Console.WriteLine($"{Name} healed to full health.");
                 CurrentHP = MaxHP;
+                Console.WriteLine($"{Name} has healed to full health.\n" +
+                    $"Current HP: {CurrentHP}/{MaxHP}");
                 return;
             }
             CurrentHP = CurrentHP + healingAmmount;
